@@ -33,5 +33,6 @@ const styles = StyleSheet.create({
     buttonText: {
         color: 'white',
         textAlign: 'center',
+        fontSize: Platform.OS === 'ios' ? 18 : 14,
     },
 })

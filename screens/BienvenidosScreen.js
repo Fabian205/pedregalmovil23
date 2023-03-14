@@ -55,7 +55,7 @@ const BienvenidosScreen = (props) => {
             style={{
               fontWeight: "bold",
               fontSize: 25,
-              marginTop:Platform.OS === 'ios' ? 2 : 25,
+              marginTop: 8,
               marginBottom: 10,
               textAlign: "center",
               color: "grey",

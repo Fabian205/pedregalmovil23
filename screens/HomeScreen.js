@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, Switch } from 'react-native';
+import { StyleSheet, Text, View, Image, Switch, Platform } from 'react-native';
 import image from '../assets/logoTranspar.png'
 import { useNavigation } from "@react-navigation/native"
 import Boton from '../components/Boton'
@@ -8,6 +8,9 @@ import themeContext from '../config/themeContext'
 
 const Separator = () => (
   <View style={styles.separator} />
+);
+const Separator2 = () => (
+  <View style={styles.separator2} />
 );
 
 const HomeScreen = () => {
@@ -25,7 +28,8 @@ const HomeScreen = () => {
       <Image 
         source={image}
         style= {styles.image}
-      />         
+      />
+      <Separator2 />         
       <View style={{flexDirection: "row", alignItems:'flex-start'}}>
         <Text style={[styles.text, {color: theme.color}]}>Dark Mode</Text>
         <Switch 
@@ -55,11 +59,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title:{
-    fontSize: 22,
+    fontSize: Platform.OS === 'ios' ? 30 : 22,
     color: 'indigo',
   },
   subtitle:{
-    fontSize: 12,
+    fontSize: Platform.OS === 'ios' ? 16 : 12,
     color: 'indigo'
   },
   versionapp:{
@@ -72,9 +76,14 @@ const styles = StyleSheet.create({
     borderBottomColor: 'indigo',
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
+  separator2: {
+    marginVertical: Platform.OS === 'ios' ? 10 : 5,
+    borderBottomColor: 'indigo',
+    borderBottomWidth: StyleSheet.hairlineWidth,
+  },
   text:{
     fontWeight: 'bold',
-    fontSize: 12,
+    fontSize: Platform.OS === 'ios' ? 16 : 12,
     paddingTop: 15,
     paddingRight: 15,    
   },
