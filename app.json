@@ -7,7 +7,7 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash_rn01.png",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#1c1c1c"
     },
@@ -32,5 +32,6 @@
         "projectId": "5ea20108-8c44-4228-9637-4be1a38ece24"
       }
     }
-  }
+  },
+  "name": "pedregalmovil23"
 }

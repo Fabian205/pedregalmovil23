@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
   },
   separator: {
-    marginVertical: 14,
+    marginVertical: 10,
     marginLeft: 30,
     marginRight: 30,
     borderBottomWidth: StyleSheet.hairlineWidth,
